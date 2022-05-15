@@ -22,6 +22,9 @@ library(package2csv)
 ## Running the Package
 In an R session, run `datasets_to_csv(<name of package>)`.
 
+Multiple packages can be read at once by passing the package names as a vector of strings. For example: 
+```datasets_to_csv(c("MASS", "plyr"))```
+
 ## TODO
 - [ ] Add Man page
 - [ ] Add support for loading multiple packages
