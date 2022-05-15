@@ -26,7 +26,7 @@ Multiple packages can be read at once by passing the package names as a vector o
 ```datasets_to_csv(c("MASS", "plyr"))```
 
 ## TODO
-- [ ] Add Man page
+- [x] Add Man page
 - [x] Add support for loading multiple packages
 - [x] Allow the user the ability to specify their working directory
 
