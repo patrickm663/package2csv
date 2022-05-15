@@ -1,0 +1,8 @@
+node_modules
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.cache
+package.json
+package-lock.json

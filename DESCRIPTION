@@ -1,0 +1,11 @@
+Package: package2csv
+Type: Package
+Title: Download all Datasets from a Given Package into CSV
+Version: 0.1.0
+Author: Patrick Moehrke
+Maintainer: Patrick Moehrke <patrickmoehrke46@gmail.com>
+Description: This package makes it asier for users to create a CSV dump of all the datasets in a given package.
+    This is particularly useful when using R datasets elsewhere (e.g. Python, Julia) and replaces what would otherwise be a cumbersome task of manually writing datasets to CSV.
+License: BSD 3-Clause
+Encoding: UTF-8
+LazyData: true
