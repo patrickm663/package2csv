@@ -23,9 +23,9 @@ library(package2csv)
 In an R session, run `datasets_to_csv(<name of package>)`.
 
 ## TODO
-[] - Add Man page
-[] - Add support for loading multiple packages
-[] - Allow the user the ability to specify their working directory
+[ ] - Add Man page
+[ ] - Add support for loading multiple packages
+[ ] - Allow the user the ability to specify their working directory
 
 ## Licence
 This is free software with NO WARRANTY offered under BSD 3-Clause.
