@@ -3,6 +3,8 @@ node_modules
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
+*.csv
 .cache
 package.json
 package-lock.json

@@ -3,22 +3,30 @@
 # LICENCE: BSD 3-Clause
 
 # This script allows users to specify a package and download all the datasets
-# as CSVs for analysis elsewhere.
+# as CSVs into your current working directory for analysis elsewhere.
 # As a default, index numbering is removed.
 
-write_datasets_to_csv <- function(package) {
+datasets_to_csv <- function(package) {
     d <- data(package = package)
     list_of_datasets <- d$results[, "Item"]
+    if(length(list_of_datasets) == 0){
+      return(print("No datasets found"))
+    }
+
     for (dataset in list_of_datasets) {
+        dataset <- gsub(" ", "", dataset, fixed = TRUE)
         data(list = dataset)
-        write.csv(get(dataset),
-		  paste(dataset, ".csv", sep = ""),
-		  row.names = FALSE)
-        rm(list = dataset, pos = 1)
+        tryCatch({
+          df <- apply(get(dataset), 2, as.character)
+          write.csv(df,
+                    paste(dataset, ".csv", sep = ""),
+                    row.names = FALSE)
+          rm(list = dataset, pos = 1)
+        }, error = function(e) e)
     }
 }
 
 # Example:
 
-#library(plyr)
-#write_datasets_to_csv("plyr")
+#library(MASS)
+#datasets_to_csv("MASS")
