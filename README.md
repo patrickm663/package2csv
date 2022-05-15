@@ -20,15 +20,15 @@ Load the package:
 library(package2csv)
 ```
 ## Running the Package
-In an R session, run `datasets_to_csv(<name of package>)`.
+In an R session, run `datasets_to_csv(<name of package>, workdir = "<OPTIONAL>")`. _Note: If the directory provided is invalid, `write.csv()` will throw an error._ If `workdir = ` is not specified, it will use your current working directory.
 
 Multiple packages can be read at once by passing the package names as a vector of strings. For example: 
 ```datasets_to_csv(c("MASS", "plyr"))```
 
 ## TODO
 - [ ] Add Man page
-- [ ] Add support for loading multiple packages
-- [ ] Allow the user the ability to specify their working directory
+- [x] Add support for loading multiple packages
+- [x] Allow the user the ability to specify their working directory
 
 ## Licence
 This is free software with NO WARRANTY offered under BSD 3-Clause.
