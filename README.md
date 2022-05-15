@@ -1,5 +1,31 @@
 # package2csv
-This package allows users to easily download all the datasets from a given R package into CSV for further analysis.
+This R package allows users to easily download all the datasets from a given R package into CSV for further analysis.
 
+The script is a result of much trial-and-error to automate the process of writing datasets to CSV form. No consise way was available online, so I made my own.
+
+## Installation
+### Prerequisite
+Ensure 'devtools' is installed and you are able to install packages from GitHub.
+```
+install.packages("devtools")
+```
+### Installation using DevTools
+Install this package as follows:
+```
+library(devtools)
+devtools::install_github("patrickm663/package2csv")
+```
+Load the package:
+```
+library(package2csv)
+```
 ## Running the Package
-In an R session, run `write_datasets_to_csv(<name of package>)`.
+In an R session, run `datasets_to_csv(<name of package>)`.
+
+## TODO
+[] - Add Man page
+[] - Add support for loading multiple packages
+[] - Allow the user the ability to specify their working directory
+
+## Licence
+This is free software with NO WARRANTY offered under BSD 3-Clause.
